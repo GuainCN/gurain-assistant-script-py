@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "gurain-assistant-script-py"
+version = "0.1.0"
+description = ""
+authors = ["Haomin Kong <a645162@qq.com>"]
+readme = "README.md"
+license = "GPL-3.0"
+packages = [{ include = "gurain_assistant" }]
+
+[[tool.poetry.source]]
+name = "Tencent-PyPi"
+url = "https://mirrors.cloud.tencent.com/pypi/simple"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "HuaWei-PyPi"
+url = "https://mirrors.huaweicloud.com/pypi/simple"
+priority = "supplemental"
+
+[[tool.poetry.source]]
+name = "TUNA-PyPi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "supplemental"
+
+[[tool.poetry.source]]
+name = "USTC-PyPi"
+url = "https://mirrors.ustc.edu.cn/pypi/web/simple"
+priority = "supplemental"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+requests = "^2.32.3"
+urllib3 = "<2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
